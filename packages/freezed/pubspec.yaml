@@ -14,8 +14,12 @@ dependencies:
   build_config: ^1.0.0
   meta: ^1.7.0
   source_gen: ^1.1.0
-  freezed_annotation: #'>=0.12.0 <2.0.0'
-    path: ../freezed_annotation
+  freezed_annotation:
+    # path: ../freezed_annotation
+    git:
+      url: https://github.com/long1eu/freezed
+      ref: feat/update-deps
+      path: packages/freezed_annotation
 
 dev_dependencies:
   json_serializable: ^5.0.1
