@@ -157,6 +157,7 @@ class _$_Example<T> with DiagnosticableTreeMixin implements _Example<T> {
       const DeepCollectionEquality().hash(a) ^
       const DeepCollectionEquality().hash(b);
 
+  @JsonKey(ignore: true)
   @override
   _$ExampleCopyWith<T, _Example<T>> get copyWith =>
       __$ExampleCopyWithImpl<T, _Example<T>>(this, _$identity);
@@ -217,6 +218,7 @@ abstract class _Example<T> implements Example<T> {
 
   int get a;
   String get b;
+  @JsonKey(ignore: true)
   _$ExampleCopyWith<T, _Example<T>> get copyWith;
 }
 
@@ -293,6 +295,7 @@ class _$_Example2<T> with DiagnosticableTreeMixin implements _Example2<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(c);
 
+  @JsonKey(ignore: true)
   @override
   _$Example2CopyWith<T, _Example2<T>> get copyWith =>
       __$Example2CopyWithImpl<T, _Example2<T>>(this, _$identity);
@@ -352,6 +355,7 @@ abstract class _Example2<T> implements Example<T> {
   factory _Example2(T c) = _$_Example2<T>;
 
   T get c;
+  @JsonKey(ignore: true)
   _$Example2CopyWith<T, _Example2<T>> get copyWith;
 }
 

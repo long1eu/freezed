@@ -135,6 +135,7 @@ class _$_Example<T> implements _Example<T> {
       const DeepCollectionEquality().hash(a) ^
       const DeepCollectionEquality().hash(b);
 
+  @JsonKey(ignore: true)
   @override
   _$ExampleCopyWith<T, _Example<T>> get copyWith =>
       __$ExampleCopyWithImpl<T, _Example<T>>(this, _$identity);
@@ -195,6 +196,7 @@ abstract class _Example<T> implements Example<T> {
 
   int get a;
   String get b;
+  @JsonKey(ignore: true)
   _$ExampleCopyWith<T, _Example<T>> get copyWith;
 }
 
@@ -250,6 +252,7 @@ class _$_Example2<T> implements _Example2<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(c);
 
+  @JsonKey(ignore: true)
   @override
   _$Example2CopyWith<T, _Example2<T>> get copyWith =>
       __$Example2CopyWithImpl<T, _Example2<T>>(this, _$identity);
@@ -309,6 +312,7 @@ abstract class _Example2<T> implements Example<T> {
   factory _Example2(T c) = _$_Example2<T>;
 
   T get c;
+  @JsonKey(ignore: true)
   _$Example2CopyWith<T, _Example2<T>> get copyWith;
 }
 
@@ -387,6 +391,7 @@ mixin _$SimpleImplements {
     @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $SimpleImplementsCopyWith<SimpleImplements> get copyWith;
 }
 
@@ -482,6 +487,7 @@ class _$SimplePerson implements SimplePerson {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(age);
 
+  @JsonKey(ignore: true)
   @override
   $SimplePersonCopyWith<SimplePerson> get copyWith =>
       _$SimplePersonCopyWithImpl<SimplePerson>(this, _$identity);
@@ -556,6 +562,7 @@ abstract class SimplePerson implements SimpleImplements {
   String get name;
   int get age;
   @override
+  @JsonKey(ignore: true)
   $SimplePersonCopyWith<SimplePerson> get copyWith;
 }
 
@@ -616,6 +623,7 @@ class _$SimpleStreet with AdministrativeArea<House> implements SimpleStreet {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(name);
 
+  @JsonKey(ignore: true)
   @override
   $SimpleStreetCopyWith<SimpleStreet> get copyWith =>
       _$SimpleStreetCopyWithImpl<SimpleStreet>(this, _$identity);
@@ -690,6 +698,7 @@ abstract class SimpleStreet
   @override
   String get name;
   @override
+  @JsonKey(ignore: true)
   $SimpleStreetCopyWith<SimpleStreet> get copyWith;
 }
 
@@ -760,6 +769,7 @@ class _$SimpleCity with House implements SimpleCity {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(population);
 
+  @JsonKey(ignore: true)
   @override
   $SimpleCityCopyWith<SimpleCity> get copyWith =>
       _$SimpleCityCopyWithImpl<SimpleCity>(this, _$identity);
@@ -834,6 +844,7 @@ abstract class SimpleCity implements SimpleImplements, House {
   String get name;
   int get population;
   @override
+  @JsonKey(ignore: true)
   $SimpleCityCopyWith<SimpleCity> get copyWith;
 }
 
@@ -906,6 +917,7 @@ class _$SimpleCountry with House implements SimpleCountry {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(population);
 
+  @JsonKey(ignore: true)
   @override
   $SimpleCountryCopyWith<SimpleCountry> get copyWith =>
       _$SimpleCountryCopyWithImpl<SimpleCountry>(this, _$identity);
@@ -981,6 +993,7 @@ abstract class SimpleCountry
   String get name;
   int get population;
   @override
+  @JsonKey(ignore: true)
   $SimpleCountryCopyWith<SimpleCountry> get copyWith;
 }
 
@@ -1058,6 +1071,7 @@ mixin _$CustomMethodImplements {
     @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $CustomMethodImplementsCopyWith<CustomMethodImplements> get copyWith;
 }
 
@@ -1154,6 +1168,7 @@ class _$PersonCustomMethod extends PersonCustomMethod {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(age);
 
+  @JsonKey(ignore: true)
   @override
   $PersonCustomMethodCopyWith<PersonCustomMethod> get copyWith =>
       _$PersonCustomMethodCopyWithImpl<PersonCustomMethod>(this, _$identity);
@@ -1229,6 +1244,7 @@ abstract class PersonCustomMethod extends CustomMethodImplements {
   String get name;
   int get age;
   @override
+  @JsonKey(ignore: true)
   $PersonCustomMethodCopyWith<PersonCustomMethod> get copyWith;
 }
 
@@ -1293,6 +1309,7 @@ class _$StreetCustomMethod extends StreetCustomMethod
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(name);
 
+  @JsonKey(ignore: true)
   @override
   $StreetCustomMethodCopyWith<StreetCustomMethod> get copyWith =>
       _$StreetCustomMethodCopyWithImpl<StreetCustomMethod>(this, _$identity);
@@ -1368,6 +1385,7 @@ abstract class StreetCustomMethod extends CustomMethodImplements
   @override
   String get name;
   @override
+  @JsonKey(ignore: true)
   $StreetCustomMethodCopyWith<StreetCustomMethod> get copyWith;
 }
 
@@ -1441,6 +1459,7 @@ class _$CityCustomMethod extends CityCustomMethod with House {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(population);
 
+  @JsonKey(ignore: true)
   @override
   $CityCustomMethodCopyWith<CityCustomMethod> get copyWith =>
       _$CityCustomMethodCopyWithImpl<CityCustomMethod>(this, _$identity);
@@ -1518,6 +1537,7 @@ abstract class CityCustomMethod extends CustomMethodImplements
   String get name;
   int get population;
   @override
+  @JsonKey(ignore: true)
   $CityCustomMethodCopyWith<CityCustomMethod> get copyWith;
 }
 
@@ -1581,6 +1601,7 @@ class _$DuplexCustomMethod extends DuplexCustomMethod {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(name);
 
+  @JsonKey(ignore: true)
   @override
   $DuplexCustomMethodCopyWith<DuplexCustomMethod> get copyWith =>
       _$DuplexCustomMethodCopyWithImpl<DuplexCustomMethod>(this, _$identity);
@@ -1656,6 +1677,7 @@ abstract class DuplexCustomMethod extends CustomMethodImplements
   @override
   String get name;
   @override
+  @JsonKey(ignore: true)
   $DuplexCustomMethodCopyWith<DuplexCustomMethod> get copyWith;
 }
 
@@ -1723,6 +1745,7 @@ mixin _$GenericImplements<T> {
     @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $GenericImplementsCopyWith<T, GenericImplements<T>> get copyWith;
 }
 
@@ -1818,6 +1841,7 @@ class _$GenericPerson<T> implements GenericPerson<T> {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(age);
 
+  @JsonKey(ignore: true)
   @override
   $GenericPersonCopyWith<T, GenericPerson<T>> get copyWith =>
       _$GenericPersonCopyWithImpl<T, GenericPerson<T>>(this, _$identity);
@@ -1886,6 +1910,7 @@ abstract class GenericPerson<T> implements GenericImplements<T> {
   String get name;
   int get age;
   @override
+  @JsonKey(ignore: true)
   $GenericPersonCopyWith<T, GenericPerson<T>> get copyWith;
 }
 
@@ -1958,6 +1983,7 @@ class _$GenericStreet<T>
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(value);
 
+  @JsonKey(ignore: true)
   @override
   $GenericStreetCopyWith<T, GenericStreet<T>> get copyWith =>
       _$GenericStreetCopyWithImpl<T, GenericStreet<T>>(this, _$identity);
@@ -2027,6 +2053,7 @@ abstract class GenericStreet<T>
   String get name;
   T get value;
   @override
+  @JsonKey(ignore: true)
   $GenericStreetCopyWith<T, GenericStreet<T>> get copyWith;
 }
 
@@ -2099,6 +2126,7 @@ class _$GenericCity<T> with House implements GenericCity<T> {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(population);
 
+  @JsonKey(ignore: true)
   @override
   $GenericCityCopyWith<T, GenericCity<T>> get copyWith =>
       _$GenericCityCopyWithImpl<T, GenericCity<T>>(this, _$identity);
@@ -2168,5 +2196,6 @@ abstract class GenericCity<T>
   String get name;
   int get population;
   @override
+  @JsonKey(ignore: true)
   $GenericCityCopyWith<T, GenericCity<T>> get copyWith;
 }

@@ -31,6 +31,7 @@ mixin _$MyClass {
   String get a;
   int get b;
 
+  @JsonKey(ignore: true)
   $MyClassCopyWith<MyClass> get copyWith;
 }
 
@@ -129,6 +130,7 @@ class _$_MyClass with DiagnosticableTreeMixin implements _MyClass {
       const DeepCollectionEquality().hash(a) ^
       const DeepCollectionEquality().hash(b);
 
+  @JsonKey(ignore: true)
   @override
   _$MyClassCopyWith<_MyClass> get copyWith =>
       __$MyClassCopyWithImpl<_MyClass>(this, _$identity);
@@ -142,6 +144,7 @@ abstract class _MyClass implements MyClass {
   @override
   int get b;
   @override
+  @JsonKey(ignore: true)
   _$MyClassCopyWith<_MyClass> get copyWith;
 }
 
@@ -314,6 +317,7 @@ class _$Data with DiagnosticableTreeMixin implements Data {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(value);
 
+  @JsonKey(ignore: true)
   @override
   $DataCopyWith<Data> get copyWith =>
       _$DataCopyWithImpl<Data>(this, _$identity);
@@ -392,6 +396,7 @@ abstract class Data implements Union {
   factory Data.fromJson(Map<String, dynamic> json) = _$Data.fromJson;
 
   int get value;
+  @JsonKey(ignore: true)
   $DataCopyWith<Data> get copyWith;
 }
 
@@ -578,6 +583,7 @@ class _$ErrorDetails with DiagnosticableTreeMixin implements ErrorDetails {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
 
+  @JsonKey(ignore: true)
   @override
   $ErrorDetailsCopyWith<ErrorDetails> get copyWith =>
       _$ErrorDetailsCopyWithImpl<ErrorDetails>(this, _$identity);
@@ -657,6 +663,7 @@ abstract class ErrorDetails implements Union {
       _$ErrorDetails.fromJson;
 
   String get message;
+  @JsonKey(ignore: true)
   $ErrorDetailsCopyWith<ErrorDetails> get copyWith;
 }
 
@@ -734,6 +741,7 @@ class _$Complex with DiagnosticableTreeMixin implements Complex {
       const DeepCollectionEquality().hash(a) ^
       const DeepCollectionEquality().hash(b);
 
+  @JsonKey(ignore: true)
   @override
   $ComplexCopyWith<Complex> get copyWith =>
       _$ComplexCopyWithImpl<Complex>(this, _$identity);
@@ -813,6 +821,7 @@ abstract class Complex implements Union {
 
   int get a;
   String get b;
+  @JsonKey(ignore: true)
   $ComplexCopyWith<Complex> get copyWith;
 }
 
@@ -868,6 +877,7 @@ mixin _$SharedProperty {
     @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $SharedPropertyCopyWith<SharedProperty> get copyWith;
 }
 
@@ -972,6 +982,7 @@ class _$SharedProperty0
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(age);
 
+  @JsonKey(ignore: true)
   @override
   $SharedProperty0CopyWith<SharedProperty0> get copyWith =>
       _$SharedProperty0CopyWithImpl<SharedProperty0>(this, _$identity);
@@ -1034,6 +1045,7 @@ abstract class SharedProperty0 implements SharedProperty {
   String get name;
   int get age;
   @override
+  @JsonKey(ignore: true)
   $SharedProperty0CopyWith<SharedProperty0> get copyWith;
 }
 
@@ -1112,6 +1124,7 @@ class _$SharedProperty1
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(population);
 
+  @JsonKey(ignore: true)
   @override
   $SharedProperty1CopyWith<SharedProperty1> get copyWith =>
       _$SharedProperty1CopyWithImpl<SharedProperty1>(this, _$identity);
@@ -1174,5 +1187,6 @@ abstract class SharedProperty1 implements SharedProperty {
   String get name;
   int get population;
   @override
+  @JsonKey(ignore: true)
   $SharedProperty1CopyWith<SharedProperty1> get copyWith;
 }

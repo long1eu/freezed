@@ -12,9 +12,7 @@ Future<String> documentationOfParameter(
 
   final astNode = await tryGetAstNodeForElement(parameter, buildStep);
 
-  for (Token token = astNode?.beginToken?.precedingComments;
-      token != null;
-      token = token.next) {
+  for (Token token = astNode?.beginToken?.precedingComments; token != null; token = token.next) {
     builder.writeln(token);
   }
 
@@ -29,10 +27,9 @@ Future<AstNode> tryGetAstNodeForElement(
 
   while (true) {
     try {
-      return library.session
-          .getParsedLibraryByElement(library)
+      return (library.session.getParsedLibraryByElement(library) as dynamic) //
           .getElementDeclaration(element)
-          .node;
+          .node as AstNode;
     } on InconsistentAnalysisException {
       library = await buildStep.resolver.libraryFor(
         await buildStep.resolver.assetIdForElement(element.library),

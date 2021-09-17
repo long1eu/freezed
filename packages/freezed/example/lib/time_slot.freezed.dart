@@ -31,6 +31,7 @@ mixin _$TimeSlot {
   TimeOfDay get start;
   TimeOfDay get end;
 
+  @JsonKey(ignore: true)
   $TimeSlotCopyWith<TimeSlot> get copyWith;
 }
 
@@ -120,6 +121,7 @@ class _$_TimeSlot implements _TimeSlot {
       const DeepCollectionEquality().hash(start) ^
       const DeepCollectionEquality().hash(end);
 
+  @JsonKey(ignore: true)
   @override
   _$TimeSlotCopyWith<_TimeSlot> get copyWith =>
       __$TimeSlotCopyWithImpl<_TimeSlot>(this, _$identity);
@@ -133,5 +135,6 @@ abstract class _TimeSlot implements TimeSlot {
   @override
   TimeOfDay get end;
   @override
+  @JsonKey(ignore: true)
   _$TimeSlotCopyWith<_TimeSlot> get copyWith;
 }
